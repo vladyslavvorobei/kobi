@@ -1,0 +1,41 @@
+<div class="first-screen">
+  <div class="container container--fluid">
+    <div class="first-screen__slider swiper-container">
+      <div class="first-screen__wrapper swiper-wrapper">
+        <div class="swiper-slide first-screen__slider">
+          <video preload="auto" loop="loop" autoplay="autoplay" muted="muted"
+                 poster="img/slider-img.jpg">
+            <source src="img/tron_legacy_trailer.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="swiper-slide first-screen__slider">
+          <video preload="auto" loop="loop" controls muted="muted"
+                 poster="img/slider-img.jpg">
+            <source src="img/tron_legacy_trailer.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <button class="swiper-button-next first-screen__button first-screen__next"></button>
+      <button class="swiper-button-prev first-screen__button first-screen__prev"></button>
+    </div>
+    <div class="first-screen__nav">
+      <ul>
+        <li>
+          <a href="#">
+            {{mixins.icon('news--icon')}}
+            Новости
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            {{mixins.icon('message--icon')}}
+            Рассылка
+          </a>
+        </li>
+      </ul>
+    </div>
+    <button class="first-screen__nav-btn">
+      {{mixins.icon('nav-arrow--icon')}}
+    </button>
+  </div>
+</div>

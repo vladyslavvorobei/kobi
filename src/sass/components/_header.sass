@@ -1,0 +1,397 @@
+.header
+	position: fixed
+	left: 0
+	top: 0
+	right: 0
+	background-color: rgba( $mirage, .6 )
+	transition: all .3s ease
+	z-index:  1000
+	&--scroll
+		background-color: rgba( $mirage, 1 )
+		box-shadow: 0 10px 10px 0 rgba( $mirage, .3 )
+	&--active
+		background-color: rgba( $mirage, 1 )
+	&__inner-wrapper
+		display: flex
+		justify-content: space-between
+		align-items: center
+		+r(1199)
+			flex-direction: column
+			padding: 10px 0
+	&__mobile
+		&-wrapper
+			display: flex
+			justify-content: space-between
+			+r(1199)
+				width: 100%
+		&-nav
+			+r(1199)
+				position: absolute
+				width: 320px
+				height: calc( 100vh - 62px )
+				top: 100%
+				right: -150vw
+				background-color: rgba( $mirage, 1 )
+				transition: all .5s ease
+				overflow: auto
+				flex-direction: column
+				align-items: center
+				justify-content: flex-start
+				padding: 30px 15px 50px
+				box-sizing: border-box
+				&--active
+					right: 0
+	&__burger-btn
+		display: none
+		width: 40px
+		height: 40px
+		background-color: transparent
+		border: none
+		position: relative
+		transition: all .3s ease
+		+r(1199)
+			display: block
+		&--active
+			.header__bar
+				background-color: transparent
+				&::before
+					top: 0
+					transform: rotate(45deg)
+				&::after
+					top: 0
+					transform: rotate(-45deg)
+	&__bar
+		width: 30px
+		height: 4px
+		background-color: $lochinvar
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%)
+		transition: all .3s ease
+		&::before, &::after
+			content: ''
+			width: 30px
+			height: 4px
+			background-color: $lochinvar
+			position: absolute
+			left: 0
+			transition: all .3s ease
+		&::before
+			top: -10px
+		&::after
+			top: 10px
+
+
+	&__logo
+		display: block
+		flex-shrink: 0
+		max-width: 89px
+		width: 100%
+		img
+			display: block
+			width: 100%
+			height: auto
+	&__nav
+		margin-left: auto
+		margin-right: 150px
+		+r(1500)
+			margin-right: 50px
+		+r(1199)
+			margin: 0
+	&__additionally
+		display: flex
+		align-items: center
+		+r(1199)
+			flex-direction: column
+			align-items: flex-start
+			width: 100%
+	&__add-wrapper
+		display: flex
+		align-items: center
+		justify-content: space-between
+		flex-wrap: wrap
+		+r(1199)
+			width: 100%
+			margin-bottom: 10px
+			&:last-of-type
+				margin-bottom: 0
+	&__compare
+		margin-right: 10px
+	&__search
+		margin-right: 25px
+		+r(1199)
+			margin-right: 0
+	&__callback
+		margin-right: 30px
+.lang
+	flex-shrink: 0
+	+r(1199)
+		display: flex
+		width: 100%
+		justify-content: center
+	&__link
+		display: block
+		font-size: 14px
+		line-height: 1.4em
+		color: $white
+		+r(1199)
+			margin: 5px
+		&:hover
+			color: rgba( $viking, .7 )
+		&--active
+			color: $viking
+.callback
+	flex-shrink: 0
+	display: flex
+	align-items: center
+	transition: all .3s ease
+	+r(1199)
+		padding-left: 18px
+		width: 100%
+		margin-bottom: 10px
+	.icon
+		display: block
+		font-size: 14px
+		fill: $white
+		margin-right: 7px
+		transition: all .3s ease
+		+r(1199)
+			font-size: 16px
+			margin-right: 25px
+	span
+		display: block
+		color: $white
+		font-size: 18px
+		transition: all .3s ease
+		+r(1350)
+			display: none
+		+r(1199)
+			display: block
+	&:hover
+		.icon
+			fill: $viking
+		span
+			color: $viking
+
+.search
+	+r(1199)
+		width: calc( 100% - 60px )
+	&__label
+		display: flex
+		justify-content: flex-end
+		position: relative
+	&__input
+		border: none
+		transition: all .5s ease
+		position: absolute
+		border-radius: 0
+		padding: 9px 0
+		box-sizing: border-box
+		background-color: $white
+		font-size: 18px
+		color: $raven
+		line-height: 1.25em
+		outline: none
+		box-shadow: none
+		font-family: $bodyFontFamily
+		font-weight: 400
+		top: 0
+		display: block
+		width: 0
+		right: 0
+		+r(1199)
+			width: 100%
+			padding: 9px 50px 9px 20px
+		&::placeholder
+			color: $raven
+	&__btn
+		display: block
+		z-index: 100
+		width: 50px
+		height: 40px
+		padding: 0
+		border: 0
+		background-color: transparent
+		transition: all .3s ease
+		.icon
+			font-size: 16px
+			fill: $white
+			transition: all .5s ease
+			+r(1199)
+				fill: $viking
+	&:hover
+		.icon
+			fill: $viking
+	&--active
+		.icon
+			fill: $viking
+		.search__input
+			width: 315px
+			padding: 9px 50px 9px 20px
+			+r(1199)
+				width: 100%
+
+.compare
+	flex-shrink: 0
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 50px
+	height: 40px
+
+	.icon
+		display: block
+		fill: $white
+		font-size: 20px
+		transition: all .3s ease
+	&:hover
+		.icon
+			fill: $viking
+.nav
+	+r(1199)
+		width: 100%
+	&__list
+		transition: all .3s ease
+		display: flex
+		box-sizing: border-box
+		+r(1199)
+			flex-direction: column
+			&--active
+				display: block!important
+		&--inner, &--last
+			display: none
+			position: absolute
+			+r(1199)
+				position: relative
+		&--inner
+			width: 100%
+			background-color: $white
+			left: 0
+			top: auto
+			padding: 11px 15% 35px
+			box-shadow: 0 10px 10px 0 rgba( $mirage, .3 )
+			+r(1650)
+				padding: 11px 10% 35px
+			+r(1199)
+				box-shadow: none
+				padding: 0
+				margin-bottom: 10px
+				background-color: transparent
+				display: block
+		&--last
+			border-left: 1px solid $gallery
+			left: calc( 15% + 500px )
+			top: 0
+			height: calc( 100% - 46px )
+			width: calc( 70% - 500px )
+			margin: 11px 0 35px 0
+			padding: 37px 20px 0 80px
+			background-color: $white
+			box-sizing: border-box
+			flex-direction: column
+			flex-wrap: wrap
+			+r(1650)
+				left: calc( 10% + 500px )
+				width: calc( 80% - 500px )
+			+r(1199)
+				display: none
+			&::before
+				content: attr(data-list-name)
+				width: 100%
+				display: block
+				color: $lochinvar
+				font-size: 13px
+				padding: 6px 0
+				top: 0
+				left: 80px
+				position: absolute
+				border-bottom: 1px solid $gallery
+				+r(1199)
+					content: none
+	&__list-item
+		transition: all .3s ease
+		&--inner
+			display: block
+			max-width: 500px
+			&:hover
+				.nav__list-title--inner
+					color: $white
+					background-color: $mirage
+					+r(1199)
+						color: $mirage
+						background-color: $white
+				.nav__list--last
+					display: flex
+					+r(1199)
+		&--main
+			&:hover
+				.nav__list-title--main
+					color: $lochinvar
+					background-color: $white
+		&--last
+			width: 50%
+			+r(1199)
+				width: 100%
+			&:hover
+				.nav__list-title--last
+					color: $lochinvar
+		&:hover
+			& > ul
+				display: block
+			.nav__list--last
+				+r(1199)
+					display: none
+	&__list-title
+		display: block
+		line-height: 1em
+		box-sizing: border-box
+		transition: all .3s ease
+		&--main
+			display: inline-block
+			color: $white
+			padding: 16px 25px 29px
+			margin-top: 18px
+			border-top: 1px solid transparent
+			transition: all .3s ease
+			+r(1199)
+				padding: 4px
+				text-align: center
+				display: block
+				margin-top: 0
+				margin-bottom: 10px
+				background-color: $white
+				color: $mirage
+		&--inner
+			font-size: 13px
+			padding: 12px 50px 12px 12px
+			margin-right: 30px
+			color: $mirage
+			+r(1199)
+				margin-right: 0
+				padding: 4px
+				margin-bottom: 10px
+				position: relative
+				color: $white
+		&--drop-list
+			position: relative
+			&::before
+				content: ''
+				width: 10px
+				height: 10px
+				border-top: 3px solid $white
+				border-right: 3px solid $white
+				position: absolute
+				right: 23px
+				top: 50%
+				transform: translateY(-50%) rotate(45deg)
+				+r(1199)
+					content: none
+		&--last
+			color: $mirage
+			font-size: 13px
+			padding: 10px 0
+			+r(1199)
+				padding: 4px
+				background-color: $white
+				border-bottom:  1px solid $raven

@@ -1,0 +1,111 @@
+.first-screen
+	height: 100vh
+	box-sizing: border-box
+	background: $mirage
+	position: relative
+	overflow: hidden
+	&__slider
+		height: 100vh
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		overflow: hidden
+		z-index: 1
+		video
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			object-fit: cover
+	&__button
+		width: 80px
+		height: 80px
+		border: none
+		background-color: rgba( $mirage, .6 )
+		padding: 0
+		left: 0
+		&:hover
+			background-color: rgba( $mirage, 1 )
+		&::after
+			content: none
+		&::before
+			content: ''
+			width: 15px
+			height: 26px
+			background: url('../img/slider-arrow-left-white.svg') center no-repeat
+			background-size: contain
+	&__next
+		left: auto
+		right: 0
+		&::before
+			background: url('../img/slider-arrow-right-white.svg') center no-repeat
+			background-size: contain
+	&__nav
+		z-index: 100
+		position: absolute
+		width: 100%
+		height: 150px
+		bottom: -150px
+		background-color: rgba($mirage, .6)
+		left:  0
+		right: 0
+		transition: all .3s ease
+		ul
+			display: flex
+			height: calc(100% - 50px)
+			justify-content: center
+			align-items: flex-start
+			li
+				display: block
+				margin: 30px 6% 0
+			a
+				display: flex
+				flex-direction: column
+				align-items: center
+				color: $white
+				font-size: 18px
+				transition: all .3s ease
+				.icon
+					font-size: 20px
+					fill: $white
+					display: block
+					margin-bottom: 20px
+					transition: all .3s ease
+				&:hover
+					color: $viking
+					.icon
+						fill: $viking
+		&-btn
+			position: absolute
+			bottom: 0
+			z-index: 150
+			width: 100%
+			background: rgba( $mirage, .6)
+			border: none
+			height: 50px
+			display: flex
+			justify-content: center
+			align-items: center
+			box-sizing: border-box
+			padding: 0 20px
+			transition: all .3s ease
+			.icon
+				display: block
+				font-size: 23px
+				fill: $white
+				transition: all .3s ease
+			&:hover
+				background-color: $mirage
+				.icon
+					fill: $viking
+			&--active
+				background-color: $mirage
+				.icon
+					transform: rotateX(180deg)
+				&:hover
+					.icon
+						fill: $viking
+		&--active
+			bottom: 0

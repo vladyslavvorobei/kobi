@@ -1,0 +1,107 @@
+body
+	font-family: $bodyFontFamily
+	font-weight: 400
+	font-style: normal
+	font-size: $bodyFontSize
+	background-color: $bodyBackgroundColor
+	color: $bodyFontColor
+	line-height: $bodyLineHeight
+	overflow-x: hidden
+	position: relative
+	min-width: 320px
+	padding: 0
+	margin: 0
+	height: 100%
+	//min-height: 5000px
+
+*
+	&::after,
+	&::before
+		-webkit-box-sizing: border-box
+		box-sizing: border-box
+
+ul
+	margin: 0
+	padding: 0
+	list-style-type: none
+
+a
+	text-decoration: none
+
+section
+	position: relative
+
+button
+	outline: none
+	cursor: pointer
+
+h2
+	font-family: $bodyFontFamily
+	font-size: 36px
+	font-weight: 400
+	margin: 0 0 30px
+	line-height: 1.5em
+	display: flex
+	+r(991)
+		font-size: 33px
+	+r(767)
+		font-size: 31px
+		flex-direction: column
+	+r(575)
+		font-size: 24px
+	a
+		display: inline-block
+		font-size: 18px
+		color: $bodyFontColor
+		margin: 0 0 0 auto
+		font-weight: 400
+		transition: all .3s ease
+		&:hover
+			color: $viking
+.container
+	width: 100%
+	height: auto
+	padding-right: 15px
+	padding-left: 15px
+	margin-right: auto
+	margin-left: auto
+	position: relative
+	box-sizing: border-box
+	+r(1199)
+		max-width: 960px
+	+r(992)
+		max-width: 720px
+	+r(768)
+		max-width: 540px
+	+rmin(1200)
+		max-width: 1300px
+	&--big
+		+rmin(1200)
+			max-width: 1740px
+	&--fluid
+		max-width: none
+		padding: 0
+
+
+.initial
+	position: initial
+
+.button
+	display: inline-block
+	background-color: $viking
+	color: $white
+	border: 1px solid $viking
+	border-radius: 24px
+	font-family: $bodyFontFamily
+	font-weight: 400
+	font-size: 16px
+	line-height: 1em
+	padding: 16px 27px
+	transition: all .3s ease
+	&:hover
+		color: $viking
+		background-color: transparent
+	&--center
+		display: block
+		margin: 0 auto
+		text-align: center

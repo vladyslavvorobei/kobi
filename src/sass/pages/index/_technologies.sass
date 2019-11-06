@@ -1,0 +1,72 @@
+.technologies
+	padding: 90px 0
+	+r(992)
+		padding: 70px 0
+	+r(575)
+		padding: 40px 0
+	&__inner-wrapper
+		display: grid
+		grid-template-columns: repeat(4, 1fr)
+		grid-gap: 30px 20px
+		padding: 80px 0 0
+		+r(1199)
+			grid-template-columns: repeat(2, 1fr)
+			padding: 60px 0 0
+		+r(767)
+			padding: 30px 0 0
+		+r(575)
+			grid-template-columns: 1fr
+			grid-gap: 20px
+			padding: 0
+
+	&__item
+		text-align: center
+		display: flex
+		flex-direction: column
+		justify-content: center
+		&-img
+			position: relative
+			padding: 15px
+			margin: 0 auto 15px
+			&::before
+				content: ''
+				width: calc( 100% - 30px )
+				height: calc( 100% - 30px )
+				max-height:
+				position: absolute
+				background-color: transparent
+				left: 50%
+				top: 50%
+				transform: translate(-50%, -50%)
+				border-radius: 50%
+				border: 7px solid transparent
+				transition: all .3s ease
+		img
+			display: block
+			width: auto
+			height: auto
+			max-width: 100%
+			max-height: 270px
+			box-sizing: border-box
+			border-radius: 50%
+			+r(767)
+				max-height: 160px
+		h3
+			font-size: 22px
+			margin: 0 0 30px
+			+r(767)
+				font-size: 20px
+				margin-bottom: 20px
+			+r(575)
+				font-size: 18px
+				margin-bottom: 15px
+		p
+			margin: 0 0 10px
+			font-size: 14px
+			&:last-of-type
+				margin-bottom: 30px
+		&:hover
+			.technologies__item-img
+				&::before
+					border: 7px solid $viking
+
