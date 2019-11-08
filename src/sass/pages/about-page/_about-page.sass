@@ -1,0 +1,34 @@
+.about-page
+	padding: 0 0 90px
+	+r(991)
+		padding-bottom: 70px
+	+r(767)
+		padding-bottom: 60px
+	+r(575)
+		padding-bottom: 40px
+	&__content
+		display: flex
+		justify-content: space-between
+		+r(991)
+			flex-direction: column
+		&:nth-of-type(even)
+			flex-direction: row-reverse
+			+r(991)
+				flex-direction: column
+	&__item
+		width: calc( 50% - 10px )
+		+r(991)
+			width: 100%
+		&--img
+			margin-bottom: 40px
+			+r(991)
+				margin-bottom: 20px
+			img
+				display: block
+				width: 100%
+				height: auto
+		&--text
+			p
+				margin:  25px 0
+				+r(991)
+					margin: 0 0 20px
