@@ -1,0 +1,94 @@
+.contacts
+	&__inner-wrapper
+		display: flex
+		margin-bottom: 90px
+		+r(991)
+			margin-bottom: 60px
+			flex-wrap: wrap
+		+r(767)
+			margin-bottom: 40px
+	&__img
+		width: 50%
+		max-width: 620px
+		display: flex
+		justify-content: center
+		align-items: center
+		+r(991)
+			width: 100%
+			margin: 0 auto 30px
+		img
+			display: block
+			width: 100%
+			height: auto
+			margin: 0 auto
+	&__text
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		margin-left: 90px
+		+r(991)
+			margin-left: 0
+		h3
+			font-size: 22px
+			margin:  0 0 35px
+			+r(767)
+				font-size: 20px
+			+r(575)
+				font-size: 18px
+	&__info
+		margin-bottom: 40px
+		padding-left: 40px
+		position: relative
+		+r(767)
+			margin-bottom: 30px
+		+r(575)
+			margin-bottom: 20px
+		&:last-of-type
+			margin-bottom: 0
+		&::before
+			content: ''
+			position: absolute
+			left: 0
+			background-color: $viking
+			border-radius: 50%
+			width: 25px
+			height: 25px
+			top: -5px
+		&--address
+			&::before
+				background: url('../img/geo.svg') center no-repeat
+				background-size: contain
+				width: 25px
+				height: 32px
+				left: 2px
+		&--tel
+			&::before
+				background: url('../img/tel--icon.svg') center no-repeat
+				background-size: contain
+				width: 23px
+				height: 25px
+				left: 4px
+		&--email
+			&::before
+				background: url('../img/email--icon.svg') center no-repeat
+				background-size: contain
+				width: 25px
+				height: 26px
+				left: 4px
+		&--work-time
+			&::before
+				background: url('../img/time--icon.svg') center no-repeat
+				background-size: contain
+				width: 25px
+				height: 26px
+				left: 4px
+		a
+			display: block
+			color: $mirage
+			transition: all .3s ease
+			margin-bottom: 10px
+			&:last-of-type
+				margin-bottom: 0
+			&:hover
+				color: $viking
+
