@@ -1,0 +1,85 @@
+.articles-inner
+	&__content
+		display: flow-root
+		color: $mirage
+		padding-bottom: 45px
+		+r(991)
+			padding-bottom: 25px
+		p
+			margin: 0 0 15px
+			line-height: 1.7em
+			+r(575)
+				font-size: 14px
+		h3
+			margin: 50px 0 30px
+			font-size: 22px
+			font-weight: 400
+			+r(991)
+				font-size: 20px
+				margin: 20px 0
+			+r(767)
+				font-size: 18px
+			+r(575)
+				font-size: 16px
+
+		ul, ol
+			display: block
+			margin: 15px 0 30px
+			font-size: 16px
+			line-height: 1.7em
+			+r(991)
+				margin: 0 0 15px
+			+r(575)
+				font-size: 14px
+		ul
+			padding-left: 40px
+			li
+				position: relative
+				&::before
+					content: ''
+					width: 6px
+					height: 6px
+					position: absolute
+					border-radius: 50%
+					left: -15px
+					top: 8px
+					transform: rotate(45deg)
+					background-color: $mirage
+	img
+		float: left
+		margin-right: 100px
+		padding: 10px 0
+		display: block
+		position: relative
+		width: 100%
+		max-width: 450px
+		+r(991)
+			float: none
+			margin: 0 auto
+		+r(767)
+		&::before
+			content: ''
+			width: 103%
+			height: 100%
+			position: absolute
+			border: 10px solid $mirage
+			top: 0
+			left: 27px
+			z-index: -1
+			+r(575)
+				width: 100%
+		&:nth-of-type(even)
+			float: right
+			margin-right: 0
+			margin-left: 100px
+			padding: 10px 0
+			+r(991)
+				float: none
+				margin: 0 auto
+			&::before
+				left: auto
+				right: 27px
+		img
+			display: block
+			width: 100%
+			height: auto
