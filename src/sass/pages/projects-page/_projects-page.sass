@@ -1,0 +1,22 @@
+.projects-page
+	padding-bottom: 90px
+	+r(991)
+		padding-bottom: 70px
+	+r(767)
+		padding-bottom: 60px
+	+r(575)
+		padding-bottom: 40px
+	&__inner-wrapper
+		display: grid
+		grid-template-columns: repeat(4, 1fr)
+		grid-gap: 60px 20px
+		margin-bottom: 70px
+		+r(1199)
+			grid-template-columns: repeat(3, 1fr)
+		+r(991)
+			grid-template-columns: repeat(2, 1fr)
+			grid-gap:  40px 20px
+		+r(575)
+			grid-template-columns: 1fr
+			grid-gap: 20px
+			margin-bottom: 30px
