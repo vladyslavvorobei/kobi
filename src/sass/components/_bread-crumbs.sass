@@ -1,0 +1,33 @@
+.bread-crumbs
+	&__inner
+		padding: 10px 0 60px
+		font-size: 12px
+		color: $mirage
+		display: flex
+		flex-wrap: wrap
+		+r(991)
+			padding-bottom: 50px
+		+r(767)
+			padding-bottom: 40px
+		+r(575)
+			padding-bottom: 30px
+		span
+			margin-right: 15px
+		a
+			color: $mirage
+			position: relative
+			padding-right: 15px
+			transition: all .3s ease
+			&::before
+				content: '/'
+				padding-right:  15px
+			&:last-of-type
+				margin-right: 0
+			&:hover
+				color: $lochinvar
+	&__button
+		margin-bottom: 50px
+		+r(767)
+			margin-bottom: 40px
+		+r(575)
+			margin-bottom: 30px

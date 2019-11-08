@@ -2,12 +2,13 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
-    <title>Index page</title>
+    <title>Главная страница Kobi</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#fff" />
     <meta name="format-detection" content="telephone=no" />
     <link rel="stylesheet" media="all" href="css/app.css" />
+    <link rel="stylesheet" href="">
   </head>
   <body>
     <!-- BEGIN content -->
@@ -24,10 +25,16 @@
             </button>
           </div>
           <div class="header__mobile-wrapper header__mobile-nav">
+            <a href="tel:+380445802151" class="header__callback callback callback--mobile">
+              <svg class="icon icon-callback--icon">
+                <use xlink:href="img/sprite.svg#icon-callback--icon"></use>
+              </svg>
+              <span> +38 (044) 580-21-51 </span>
+            </a>
             <nav class="header__nav nav">
               <ul class="nav__list">
                 <li class="nav__list-item nav__list-item--main">
-                  <a href="#" class="nav__list-title nav__list-title--main"> Каталог </a>
+                  <a href="catalog.html" class="nav__list-title nav__list-title--main"> Каталог </a>
                   <ul class="nav__list nav__list--inner">
                     <li class="nav__list-item nav__list-item--inner">
                       <a href="#" class="nav__list-title nav__list-title--inner  nav__list-title--drop-list"> Программное обеспечение, аналитика </a>
@@ -41,7 +48,7 @@
                       </ul>
                     </li>
                     <li class="nav__list-item nav__list-item--inner">
-                      <a href="#" class="nav__list-title nav__list-title--inner"> Сетевая IP-камера </a>
+                      <a href="catalog-inner.html" class="nav__list-title nav__list-title--inner"> Сетевая IP-камера </a>
                       <ul class="nav__list nav__list--last" data-list-name="Сетевая IP-камера">
                         <li class="nav__list-item nav__list-item--last">
                           <a href="#" class="nav__list-title nav__list-title--last"> 2.0 Мегапикселя (FULL HD 1080P) </a>
@@ -252,7 +259,7 @@
                 </form>
               </div>
               <div class="header__add-wrapper">
-                <a href="tel:+380445802151" class="header__callback callback">
+                <a href="tel:+380445802151" class="header__callback callback callback--hidden">
                   <svg class="icon icon-callback--icon">
                     <use xlink:href="img/sprite.svg#icon-callback--icon"></use>
                   </svg>
@@ -364,25 +371,25 @@
             </div>
             <div class="technologies__item">
               <div class="technologies__item-img">
-                <img src="img/teh-img-1.png" alt="">
+                <img src="img/teh-img-2.png" alt="">
               </div>
-              <h3> Распознавание номеров </h3>
+              <h3> Распознавание лиц </h3>
               <p> Описание технологии Описание технологии Описание технологии Описание технологии Описание технологии Описание технологии </p>
               <button class="button button--center"> Узнать больше </button>
             </div>
             <div class="technologies__item">
               <div class="technologies__item-img">
-                <img src="img/teh-img-1.png" alt="">
+                <img src="img/teh-img-3.png" alt="">
               </div>
-              <h3> Распознавание номеров </h3>
+              <h3> Трафик </h3>
               <p> Описание технологии Описание технологии Описание технологии Описание технологии Описание технологии Описание технологии </p>
               <button class="button button--center"> Узнать больше </button>
             </div>
             <div class="technologies__item">
               <div class="technologies__item-img">
-                <img src="img/teh-img-1.png" alt="">
+                <img src="img/teh-img-4.png" alt="">
               </div>
-              <h3> Распознавание номеров </h3>
+              <h3> Приложения </h3>
               <p> Описание технологии Описание технологии Описание технологии Описание технологии Описание технологии Описание технологии </p>
               <button class="button button--center"> Узнать больше </button>
             </div>
@@ -418,13 +425,13 @@
               </li>
               <li>
                 <a href="#">
-                  <h3> В продажу поступили новые бюджетные камеры 4 MP версии Light </h3>
+                  <h3> В продажу поступили новые бюджетные камеры 4 MP версии Light 4 MP версии Light 4 MP версии Light </h3>
                   <time datetime="2019-11-11"> 11.11.2019 </time>
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <h3> В продажу поступили новые бюджетные камеры 4 MP версии Light 4 MP версии Light </h3>
+                  <h3> В продажу поступили новые бюджетные камеры 4 MP версии Light 4 MP версии Light 4 MP версии Light </h3>
                   <time datetime="2019-11-11"> 11.11.2019 </time>
                 </a>
               </li>
@@ -436,37 +443,45 @@
         <div class="container">
           <h2> Успешные проекты <a href="#"> Все проекты </a>
           </h2>
+        </div>
+        <div class="container--fluid">
           <div class="projects__slider swiper-container">
             <div class="projects__wrapper swiper-wrapper">
               <a href="#" class="projects__slide swiper-slide">
                 <span class="projects__img">
                   <img src="img/project.jpg" alt="">
                 </span>
-                <h3> «Безопасный Город» г. Житомир </h3>
+                <h3> «Безопасный Город» <br> г. Житомир </h3>
+              </a>
+              <a href="#" class="projects__slide swiper-slide">
+                <span class="projects__img">
+                  <img src="img/project-2.jpg" alt="">
+                </span>
+                <h3> «Безопасный Город» <br> г. Чернигов </h3>
+              </a>
+              <a href="#" class="projects__slide swiper-slide">
+                <span class="projects__img">
+                  <img src="img/project-3.jpg" alt="">
+                </span>
+                <h3> «Безопасный Город» <br> г. Ровно </h3>
               </a>
               <a href="#" class="projects__slide swiper-slide">
                 <span class="projects__img">
                   <img src="img/project.jpg" alt="">
                 </span>
-                <h3> «Безопасный Город» г. Житомир </h3>
+                <h3> «Безопасный Город» <br> г. Житомир </h3>
               </a>
               <a href="#" class="projects__slide swiper-slide">
                 <span class="projects__img">
-                  <img src="img/project.jpg" alt="">
+                  <img src="img/project-2.jpg" alt="">
                 </span>
-                <h3> «Безопасный Город» г. Житомир </h3>
+                <h3> «Безопасный Город» <br> г. Чернигов </h3>
               </a>
               <a href="#" class="projects__slide swiper-slide">
                 <span class="projects__img">
-                  <img src="img/project.jpg" alt="">
+                  <img src="img/project-3.jpg" alt="">
                 </span>
-                <h3> «Безопасный Город» г. Житомир </h3>
-              </a>
-              <a href="#" class="projects__slide swiper-slide">
-                <span class="projects__img">
-                  <img src="img/project.jpg" alt="">
-                </span>
-                <h3> «Безопасный Город» г. Житомир </h3>
+                <h3> «Безопасный Город» <br> г. Ровно </h3>
               </a>
             </div>
           </div>

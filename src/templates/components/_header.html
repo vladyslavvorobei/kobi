@@ -11,10 +11,16 @@
         </button>
       </div>
       <div class="header__mobile-wrapper header__mobile-nav">
+        <a href="tel:+380445802151" class="header__callback callback callback--mobile">
+          {{mixins.icon('callback--icon')}}
+          <span>
+            +38 (044) 580-21-51
+          </span>
+        </a>
         <nav class="header__nav nav">
           <ul class="nav__list">
             <li class="nav__list-item nav__list-item--main">
-              <a href="#" class="nav__list-title nav__list-title--main">
+              <a href="catalog.html" class="nav__list-title nav__list-title--main">
                 Каталог
               </a>
               <ul class="nav__list nav__list--inner">
@@ -36,7 +42,7 @@
                   </ul>
                 </li>
                 <li class="nav__list-item nav__list-item--inner">
-                  <a href="#" class="nav__list-title nav__list-title--inner">
+                  <a href="catalog-inner.html" class="nav__list-title nav__list-title--inner">
                     Сетевая IP-камера
                   </a>
                   <ul class="nav__list nav__list--last" data-list-name="Сетевая IP-камера">
@@ -361,7 +367,7 @@
             </form>
           </div>
           <div class="header__add-wrapper">
-            <a href="tel:+380445802151" class="header__callback callback">
+            <a href="tel:+380445802151" class="header__callback callback callback--hidden">
               {{mixins.icon('callback--icon')}}
               <span>
             +38 (044) 580-21-51

@@ -26,6 +26,7 @@ function searchActivation() {
 
   $search.click(addClass);
 
+  console.log('searchActivation - ready')
 }
 
 module.exports = searchActivation;

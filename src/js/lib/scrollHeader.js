@@ -16,7 +16,7 @@ function scrollHeader() {
   else {
     $header.removeClass(addClass);
   }
-
+  console.log('scrollHeader - ready')
 }
 
 

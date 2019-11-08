@@ -1,0 +1,63 @@
+.categories
+	padding-bottom: 50px
+	+r(575)
+		padding-bottom: 40px
+	&__inner-wrapper
+		display: grid
+		grid-template-columns: repeat(4, 1fr)
+		grid-gap: 40px 20px
+		padding-bottom: 80px
+		+r(1199)
+			grid-template-columns: repeat(3, 1fr)
+		+r(991)
+			grid-template-columns: repeat(2, 1fr)
+			padding-bottom: 60px
+		+r(767)
+			padding-bottom: 40px
+		+r(575)
+			grid-template-columns: 1fr
+			grid-gap: 20px
+			padding-bottom: 30px
+	&__card
+		border-radius: 5px
+		background-color: $white
+		transition: all .3s ease
+		padding: 15px 15px 40px
+		&:hover
+			box-shadow: 0 1px 24px 3px rgba(42, 39, 35, 0.25)
+			.categories__compare
+				.icon
+					fill: $viking
+				span
+					opacity: 1
+					color: $viking
+		h4
+			color: $mirage
+			font-weight: 400
+			font-size: 16px
+			margin: 10px 0 20px
+
+	&__compare
+		display: flex
+		.icon
+			font-size: 22px
+			fill: $raven
+			margin-right: 10px
+			transition: all .3s ease
+		span
+			color: $raven
+			opacity: 0
+			transition: all .3s ease
+			+r(991)
+				opacity: 1
+	&__img
+		display: flex
+		justify-content: center
+		align-items: center
+		img
+			width: 100%
+			height: auto
+	&__price
+		font-size: 22px
+		color: $lochinvar
+

@@ -1,0 +1,45 @@
+.product-catalog
+	padding-bottom: 50px
+	+r(575)
+		padding-bottom: 40px
+	&__inner-wrapper
+		display: grid
+		grid-template-columns: repeat(4, 1fr)
+		grid-gap: 40px 20px
+		+r(1199)
+			grid-template-columns: repeat(3, 1fr)
+		+r(991)
+			grid-template-columns: repeat(2, 1fr)
+		+r(575)
+			grid-template-columns: 1fr
+			grid-gap: 20px
+	&__item
+		.icon
+			display: block
+			fill: $raven
+			font-size: 200px
+			clip-rule: evenodd
+			fill-rule: evenodd
+			transition: all .3s ease
+			+r(575)
+				font-size: 150px
+		&:hover
+			.icon
+				fill: $viking
+		h3
+			font-size: 22px
+			font-weight: 400
+			color: $mirage
+			text-align: center
+			margin: 0
+			+r(1199)
+				font-size: 20px
+			+r(767)
+				font-size: 18px
+	&__img
+		width: 200px
+		height: 200px
+		margin: 0 auto
+		+r(575)
+			width: 150px
+			height: 150px

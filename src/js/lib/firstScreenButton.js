@@ -11,7 +11,7 @@ function firstScreenButton() {
 
 
   $button.click(addClass)
-
+  console.log('firstScreenButton - ready')
 }
 
 module.exports = firstScreenButton;

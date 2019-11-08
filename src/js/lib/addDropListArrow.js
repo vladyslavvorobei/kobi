@@ -6,7 +6,7 @@ function addDropListArrow() {
   const finded = $innerTitle.closest($innerParent).find($dropList);
 
   finded.closest($innerParent).find($innerTitle).addClass(addTitleClass);
-
+  console.log('addDropListArrow - ready')
 }
 
 module.exports = addDropListArrow;

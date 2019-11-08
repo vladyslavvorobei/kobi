@@ -1,5 +1,7 @@
 .projects
-	padding: 40px 0 110px
+	padding: 70px 0 245px
+	background: url('../img/pro-bg.png') center top no-repeat
+	background-size: cover
 	+r(992)
 		padding: 70px 0
 	+r(575)
@@ -11,9 +13,14 @@
 		background-color: rgba( $white, .6 )
 		padding: 0
 		left: 0
-		top: 55%
+		top: 350px
+		+r(991)
+			top: 270px
+		+r(767)
+			top: 250px
 		+r(575)
 			width: 50px
+			top: 200px
 		&:hover
 			background-color: rgba( $white, 1 )
 		&::after
@@ -45,10 +52,10 @@
 			margin: 0
 			font-size: 22px
 			font-weight: 400
-			+r(767)
-				font-size: 20px
+			+r(768)
+				font-size: 19px
 			+r(575)
-				font-size: 18px
+				font-size: 16px
 		&:hover
 			color: $lochinvar
 			.projects__img
@@ -57,8 +64,19 @@
 	&__img
 		position: relative
 		margin: 0 auto 25px
-		width: auto
 		background-color: $white
+		width: 280px
+		height: 280px
+		display: flex
+		justify-content: center
+		align-items: center
+		border-radius: 50%
+		overflow: hidden
+		+r(768)
+			width: 160px
+			height: 160px
+		+r(575)
+			margin-bottom: 15px
 		&::before
 			content: ''
 			width: 100%
@@ -76,10 +94,7 @@
 			display: block
 			width: auto
 			height: 100%
-			max-width: 280px
-			max-height: 280px
+			max-width: 100%
 			box-sizing: border-box
-			border-radius: 50%
 			object-fit: cover
-			+r(767)
-				max-height: 160px
+

@@ -1,0 +1,224 @@
+.card-product
+	h2
+		color: $lochinvar
+	&__main
+		margin-top: 80px
+		+r(1199)
+			margin-top: 62px
+	&__button
+		position: absolute
+		left: 100%
+		+r(1840)
+			position: relative
+			left: 0
+			margin-bottom: 30px
+	&__container
+		display: flex
+		padding: 30px 0 20px
+		+r(991)
+			flex-direction: column
+			padding: 0 0 30px
+	&__img
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 50%
+		box-sizing: border-box
+		+r(991)
+			width: 100%
+			margin-bottom: 20px
+		img
+			display: block
+			width: 100%
+			height: auto
+			max-width: 460px
+	&__info
+		width: 50%
+		color: $mirage
+		+r(1199)
+			padding-left: 30px
+		+r(991)
+			width: 100%
+			padding-left: 0
+		p
+			margin: 0 0 20px
+			+r(575)
+				font-size: 14px
+			&:last-of-type
+				margin-bottom: 50px
+				+r(991)
+					margin-bottom: 30px
+	&__price
+		color: $lochinvar
+		font-size: 36px
+		display: block
+		line-height: 1em
+	&__tabs
+		padding: 40px 0
+		+r(991)
+			padding: 20px 0 40px
+	&__caption
+		display: flex
+		justify-content: space-between
+		margin-bottom: 50px
+		flex-wrap: wrap
+		li
+			flex-shrink: 0
+			width: calc(25% - 20px)
+			text-align: center
+			display: block
+			padding: 9px
+			line-height: 1em
+			border-bottom: 1px solid $gallery
+			box-sizing: border-box
+			cursor: pointer
+			color: $mirage
+			+r(991)
+				width: calc(50% - 20px)
+			+r(575)
+				width: 100%
+			&.card-product__caption--active
+				background-color: $mirage
+				color: $white
+				border-bottom: 1px solid $mirage
+	&__content
+		display: none
+		color: $mirage
+		p
+			margin: 0 0 50px
+		ul
+			margin: 0 0 50px
+			li
+				padding-left: 22px
+				position: relative
+				margin-bottom: 15px
+				&:last-of-type
+					margin-bottom: 0
+				&::before
+					content: ''
+					width: 4px
+					height: 3px
+					position: absolute
+					border-radius: 50%
+					background: $lochinvar
+					left: 1px
+					top: 10px
+
+		a
+			display: block
+			color: $lochinvar
+			&:hover
+				color: $viking
+		table
+			width: 100%
+			border-collapse: collapse
+			color: $mirage
+			th, td
+				padding: 7px 20px 3px
+			th
+				text-transform: uppercase
+				border: 1px solid $gallery
+				text-align: left
+				font-weight: 400
+			td
+				width: 50%
+				border: 1px solid $gallery
+		&--active
+			display: block
+	&__video
+		&-link
+			position: relative
+			margin-bottom: 30px
+			&::before
+				content: ''
+				width: 60px
+				height: 41px
+				position: absolute
+				left: 50%
+				top: 50%
+				transform: translate(-50%, -50%)
+				background: url('../img/youtube.png') center no-repeat
+				background-size: contain
+				opacity: 0
+				transition: all .3s ease
+			img
+				display: block
+				width: 100%
+				height: auto
+			&:hover
+				&::before
+					opacity: 1
+		&-wrapper
+			display: grid
+			grid-template-columns: repeat(4, 1fr)
+			grid-gap: 50px 15px
+			+r(991)
+				grid-template-columns: repeat(2 ,1fr)
+				grid-gap: 30px 15px
+			+r(575)
+				grid-template-columns: 1fr
+		a
+			&.card-product__download
+				color: $mirage
+				position: relative
+				+r(575)
+					font-size: 14px
+					display: flex
+					align-items: flex-end
+					justify-content: space-between
+				span
+					position: absolute
+					right: 0
+					+r(575)
+						position: relative
+						flex-shrink: 0
+						margin-left: 5px
+					.icon
+						display: block
+						font-size:  26px
+						fill: $mirage
+				&:hover
+					color: $lochinvar
+					.icon
+						fill: $lochinvar
+	&__review
+		h2
+			color: $mirage
+
+.form
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	input, textarea
+		width: 100%
+		display: block
+		background-color: transparent
+		font-size: 16px
+		color: $mirage
+		line-height: 1.25em
+		border-radius: 0
+		outline: none
+		box-sizing: border-box
+		box-shadow: none
+		font-family: $bodyFontFamily
+		font-weight: 400
+		padding: 12px 0
+		&::placeholder
+			color: $raven
+	input
+		max-width: 620px
+		border-color: transparent
+		border-bottom: 1px solid $raven
+		margin-bottom: 20px
+		&:last-of-type
+			margin-bottom: 65px
+		&:valid
+			color: $mirage
+			border-bottom: 1px solid $lochinvar
+	textarea
+		width: 100%
+		height: 200px
+		border: 1px solid $gallery
+		resize: none
+		margin-bottom: 50px
+		padding: 12px

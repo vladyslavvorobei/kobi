@@ -72,6 +72,7 @@
     "lodash": "^4.17.11"
   },
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "jquery-parallax": "^1.0.1",
     "normalize-scss": "^7.0.1",
     "svg4everybody": "^2.1.9",

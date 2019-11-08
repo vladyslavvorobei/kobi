@@ -54,7 +54,7 @@ h2
 		font-size: 18px
 		color: $bodyFontColor
 		margin: 0 0 0 auto
-		font-weight: 400
+		font-weight: 700
 		transition: all .3s ease
 		&:hover
 			color: $viking
@@ -105,3 +105,33 @@ h2
 		display: block
 		margin: 0 auto
 		text-align: center
+	&--back
+		position: relative
+		padding: 16px 48px 16px 74px
+		&::before
+			content: ''
+			width: 9px
+			height: 9px
+			position: absolute
+			border-bottom: 2px solid $white
+			border-left: 2px solid $white
+			left: 45px
+			top: 50%
+			transform: translateY(-50%) rotate(45deg)
+			transition: all .3s ease
+		&::after
+			content: ''
+			width: 12px
+			height: 2px
+			position: absolute
+			background-color: $white
+			left: 46px
+			top: 50%
+			transform: translateY(-50%)
+			transition: all .3s ease
+		&:hover
+			&::before
+				border-bottom: 2px solid $viking
+				border-left: 2px solid $viking
+			&::after
+				background-color: $viking

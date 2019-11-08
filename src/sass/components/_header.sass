@@ -173,6 +173,19 @@
 			fill: $viking
 		span
 			color: $viking
+	&--mobile
+		display: none
+		+r(1199)
+			display: flex
+			align-items: center
+			margin-right: 0
+			margin-bottom: 20px
+			padding-left: 0
+			.icon
+				margin-right: 15px
+	&--hidden
+		+r(1199)
+			display: none
 
 .search
 	+r(1199)
@@ -251,6 +264,7 @@
 .nav
 	+r(1199)
 		width: 100%
+		margin-bottom: 30px
 	&__list
 		transition: all .3s ease
 		display: flex
