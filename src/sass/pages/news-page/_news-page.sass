@@ -1,0 +1,78 @@
+.news-page
+	&__item
+		display: flex
+		margin-bottom: 50px
+		align-items: center
+		+r(767)
+			flex-direction: column
+			margin-bottom: 40px
+		&:last-of-type
+			margin-bottom: 100px
+			+r(767)
+				margin-bottom: 50px
+		&:hover
+			h3
+				color: $lochinvar
+			.news-page__more
+				color: $lochinvar
+				.icon
+					fill: $lochinvar
+	&__img
+		margin-right: 20px
+		max-width: 470px
+		width: 100%
+		flex-shrink: 0
+		+r(1199)
+			max-width: 400px
+		+r(991)
+			max-width: 300px
+		+r(767)
+			max-width: 100%
+			margin-right: 0
+			margin-bottom: 20px
+		img
+			display: block
+			width: 100%
+			height: 310px
+			object-fit: cover
+	&__text
+		display: flex
+		flex-direction: column
+		justify-content: center
+		time
+			font-size: 12px
+			color: $mirage
+			line-height:  1em
+			margin-bottom: 15px
+		h3
+			margin: 0 0 20px
+			font-size: 22px
+			color: $mirage
+			transition: all .3s ease
+			+r(991)
+				font-size: 20px
+			+r(767)
+				font-size: 18px
+		p
+			margin: 0 0 10px
+			color: $mirage
+			+r(575)
+				font-size: 14px
+			&:last-of-type
+				margin-bottom:  40px
+				+r(767)
+					margin-bottom: 20px
+	&__more
+		display: flex
+		color: $mirage
+		font-size: 12px
+		transition: all .3s ease
+		.icon
+			display: block
+			fill: $viking
+			font-size: 22px
+			margin-right: 13px
+			transform: rotate(-90deg)
+			transition: all .3s ease
+	&__button
+		margin: 0 auto 60px
