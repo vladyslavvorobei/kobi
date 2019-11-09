@@ -1,0 +1,175 @@
+.solution
+	h2
+		color: $lochinvar
+		margin-bottom: 50px
+		+r(575)
+			margin-bottom: 30px
+	&-info
+		padding: 0 0 60px
+		+r(991)
+			padding: 0 0 50px
+		+r(575)
+			padding: 0 0 40px
+		&__content
+			p
+				margin: 0 0 20px
+				&:last-of-type
+					margin-bottom: 0
+	&-about
+		padding: 60px 0
+		+r(991)
+			padding: 50px 0
+		+r(565)
+			padding: 40px 0
+		&__inner-wrapper
+			display: grid
+			grid-template-columns: repeat(3, 1fr)
+			grid-gap: 70px 180px
+			margin-bottom: 150px
+			+r(1199)
+				grid-gap: 50px 70px
+				margin-bottom: 120px
+			+r(991)
+				grid-template-columns: repeat(2, 1fr)
+				grid-gap: 60px 40px
+				margin-bottom: 90px
+			+r(767)
+				margin-bottom: 70px
+			+r(575)
+				grid-template-columns: 1fr
+				grid-gap: 30px
+				margin-bottom: 40px
+		&__item
+			display: flex
+			justify-content: space-between
+			flex-direction: column
+			h3
+				text-align: center
+				font-size: 22px
+				font-weight: 400
+				margin: 0 0 25px
+				min-height: 72px
+				+r(991)
+					font-size: 20px
+				+r(767)
+					font-size: 18px
+				+r(575)
+					min-height: auto
+					margin-bottom: 10px
+			&:hover
+				ul
+					bottom: 0
+		&__img
+			position: relative
+			overflow: hidden
+			img
+				display: block
+				width: 100%
+				height: 100%
+				max-height: 300px
+				object-fit: cover
+			ul
+				position: absolute
+				width: 100%
+				height: 100%
+				bottom: -100%
+				background-color: rgba($lochinvar, .8)
+				color: $white
+				display: flex
+				flex-direction: column
+				justify-content: space-between
+				padding: 25px
+				box-sizing: border-box
+				transition: all .3s ease
+				li
+					position: relative
+					&::before
+						content: '•'
+		&__text-container
+			p
+				margin: 0 0 20px
+				&:last-of-type
+					margin-bottom:  0
+	&-analytics
+		padding: 60px 0
+		+r(991)
+			padding: 50px 0
+		+r(565)
+			padding: 40px 0
+		&__info
+			font-size: 22px
+			font-weight: 400
+			+r(991)
+				font-size: 20px
+			+r(767)
+				font-size: 18px
+			+r(575)
+				font-size: 16px
+			li
+				position: relative
+				margin-bottom: 15px
+				&::before
+					content: '•'
+	&-equipment
+		padding: 60px 0
+		+r(991)
+			padding: 50px 0
+		+r(565)
+			padding: 40px 0
+		&__inner-wrapper
+			display: grid
+			grid-template-columns: repeat(4, 1fr)
+			grid-gap: 20px
+			+r(991)
+				grid-template-columns: repeat(2, 1fr)
+			+r(575)
+				grid-template-columns: 1fr
+		&__item
+			text-align: center
+			img
+				display: block
+				width: 100%
+				height: 100%
+				max-width: 300px
+				max-height: 300px
+				object-fit: cover
+				margin: 0 auto 10px
+
+			h3
+				margin: 0 0 35px
+				font-weight: 400
+				font-size: 22px
+				+r(991)
+					font-size: 20px
+					margin-bottom: 15px
+				+r(767)
+					font-size: 18px
+				+r(575)
+					margin-bottom: 10px
+			li
+				position: relative
+				text-align: center
+				margin-bottom: 10px
+				+r(575)
+					margin-bottom: 0
+				&::before
+					content: '•'
+	&-tabs
+		padding: 60px 0
+		+r(991)
+			padding: 50px 0
+		+r(565)
+			padding: 40px 0
+		.card-product__tabs
+			padding: 0
+		.news-page__item
+			display: flex
+		.news-page__button
+			margin-bottom:  0
+		&__map
+			img
+				display: block
+				width: 100%
+				height: auto
+				max-width: 970px
+				margin:  0 auto
