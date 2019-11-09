@@ -1,0 +1,55 @@
+.modal
+	width: 100%
+	max-width: 620px
+	background-color: $white
+	padding: 90px 40px 75px
+	box-sizing: border-box
+	margin: 5% auto
+	outline: none
+	+r(575)
+		padding: 60px 20px 45px
+	&__close
+		position: absolute
+		right: 15px
+		top: 15px
+		width: 10px
+		height: 10px
+		background-color: transparent
+		border: none
+		padding: 0
+		&::before, &::after
+			content: ''
+			width: 15px
+			height: 2px
+			position: absolute
+			left: 50%
+			top: 50%
+			background-color: $raven
+		&::before
+			transform: translate(-50%, -50%) rotate(45deg)
+		&::after
+			transform: translate(-50%, -50%) rotate(-45deg)
+	input
+		width: 100%
+		display: block
+		background-color: transparent
+		font-size: 16px
+		color: $mirage
+		line-height: 1.25em
+		border-radius: 0
+		outline: none
+		box-sizing: border-box
+		box-shadow: none
+		font-family: $bodyFontFamily
+		font-weight: 400
+		padding: 12px 0
+		border-color: transparent
+		border-bottom: 1px solid $raven
+		margin-bottom: 65px
+		+r(575)
+			margin-bottom: 30px
+		&::placeholder
+			color: $raven
+		&:valid
+			color: $mirage
+			border-bottom: 1px solid $lochinvar

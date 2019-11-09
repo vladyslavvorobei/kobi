@@ -74,6 +74,7 @@
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
     "jquery-parallax": "^1.0.1",
+    "jquery-popup-overlay": "^2.1.4",
     "normalize-scss": "^7.0.1",
     "svg4everybody": "^2.1.9",
     "svgxuse": "^1.2.6",

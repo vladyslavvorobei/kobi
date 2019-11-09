@@ -5,6 +5,9 @@ import burgerMenu from './lib/burgerMenu';
 import firstScreenButton from './lib/firstScreenButton';
 import addSliders  from './lib/swiperSlider';
 import tabs  from './lib/tabs';
+import '../../node_modules/jquery-popup-overlay/jquery.popupoverlay';
+import addModal from './lib/modal';
+
 
 import "../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min"
 
@@ -16,6 +19,7 @@ $(document).ready(
   firstScreenButton(),
   addSliders(),
   tabs(),
+  addModal()
 );
 
 $(document).scroll(scrollHeader);
